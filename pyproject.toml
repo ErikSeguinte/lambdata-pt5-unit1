@@ -1,6 +1,6 @@
 [tool.poetry]
 name = "lambdata-pt5-primefactorx01"
-version = "0.1.3"
+version = "0.1.4"
 description = ""
 authors = ["Erik Seguinte <erikseguinte@me.com>"]
 

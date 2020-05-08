@@ -12,7 +12,7 @@ def predict(X: pd.DataFrame):
     return np.random.choice([True, False], length)
 
 def print_confusion_matrix(y, y_pred):
-    df=pd.DataFrame(metrics.confusion_matrix(y, pred), columns = ['positive', 'negative'], index=['True', 'False'])
+    df=pd.DataFrame(metrics.confusion_matrix(y, y_pred), columns = ['positive', 'negative'], index=['True', 'False'])
     print(df)
 
 
@@ -20,6 +20,5 @@ if __name__ == "__main__":
     X, y = np.arange(10).reshape((5, 2)), [True, False,True, False, True]
 
     pred = predict(X)
-    print_confusion_matrix
 
     print_confusion_matrix(y, pred)
