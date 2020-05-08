@@ -1,6 +1,6 @@
 [tool.poetry]
 name = "lambdata-pt5-primefactorx01"
-version = "0.1.4"
+version = "0.1.5"
 description = ""
 authors = ["Erik Seguinte <erikseguinte@me.com>"]
 
@@ -8,7 +8,7 @@ authors = ["Erik Seguinte <erikseguinte@me.com>"]
 python = "^3.6.1"
 pandas = "^1.0"
 numpy = "^1.18"
-sklearn = "^0.0"
+pathlib = "^1.0.1"
 
 [tool.poetry.dev-dependencies]
 pytest = "^5.2"
