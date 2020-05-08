@@ -36,7 +36,7 @@ def convert_states(s: pd.Series):
 
 
 if __name__ == "__main__":
-    X, y = np.arange(10).reshape((5, 2)), [True, False, True, False, True]
+    X, y = np.arange(10).reshape((5, 2)), [True, False, True, False, True, np.NaN]
     pred = predict(X)
     print_confusion_matrix(y, pred)
 
