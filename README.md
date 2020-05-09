@@ -5,7 +5,7 @@
     from lambdata_pt5_primefactorx01.lambdata_pt5_primefactorx01 import Helper
     
 ### Notebook Installation
-    pip install -i https://test.pypi.org/simple/ lambdata-pt5-primefactorx01
+    !pip install -i https://test.pypi.org/simple/ lambdata-pt5-primefactorx01
     from lambdata_pt5_primefactorx01.lambdata_pt5_primefactorx01 import Helper
     
 ## Functions
