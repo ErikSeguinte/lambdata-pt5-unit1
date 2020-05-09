@@ -7,7 +7,7 @@ from sklearn import metrics
 
 def print_nulls(df: pd.DataFrame):
     number_of_nulls = df.isna().sum()
-    print(f'Nulls:\n{number_of_nulls}')
+    print(f"Nulls:\n{number_of_nulls}")
 
 
 def predict(X: pd.DataFrame):
@@ -16,12 +16,15 @@ def predict(X: pd.DataFrame):
 
 
 def print_confusion_matrix(y, y_pred):
-    df = pd.DataFrame(metrics.confusion_matrix(y, y_pred), columns=[
-                      'positive', 'negative'], index=['True', 'False'])
+    df = pd.DataFrame(
+        metrics.confusion_matrix(y, y_pred),
+        columns=["positive", "negative"],
+        index=["True", "False"],
+    )
     print(df)
 
 
-STATE_PATH = Path('states.json')
+STATE_PATH = Path("states.json")
 STATES = {
     "AL": "Alabama",
     "AK": "Alaska",
@@ -81,7 +84,7 @@ STATES = {
     "WA": "Washington",
     "WV": "West Virginia",
     "WI": "Wisconsin",
-    "WY": "Wyoming"
+    "WY": "Wyoming",
 }
 
 
@@ -95,8 +98,6 @@ if __name__ == "__main__":
     X, y = np.arange(10).reshape((5, 2)), [True, False, True, False, True]
     pred = predict(X)
     print_confusion_matrix(y, pred)
-
-
-    states = pd.Series(['CA', 'TX', 'ND'])
+    states = pd.Series(["CA", "TX", "ND"])
 
     print(convert_states(states))
