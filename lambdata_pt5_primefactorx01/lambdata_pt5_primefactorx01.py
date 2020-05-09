@@ -8,7 +8,6 @@ from sklearn import metrics
 def print_nulls(df: pd.DataFrame):
     number_of_nulls = df.isna().sum()
     print(f'Nulls:\n{number_of_nulls}')
-    print(df.head())
 
 
 def predict(X: pd.DataFrame):

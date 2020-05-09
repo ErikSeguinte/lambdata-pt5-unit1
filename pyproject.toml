@@ -1,6 +1,6 @@
 [tool.poetry]
 name = "lambdata-pt5-primefactorx01"
-version = "0.1.8.2"
+version = "0.1.8.3"
 description = ""
 authors = ["Erik Seguinte <erikseguinte@me.com>"]
 include = ["states.json"]
