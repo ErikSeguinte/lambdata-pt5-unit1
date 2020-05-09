@@ -1,7 +1,5 @@
 import pandas as pd
 import numpy as np
-import json
-from pathlib import Path
 from sklearn import metrics
 
 
@@ -71,16 +69,22 @@ class Helper:
 
     @staticmethod
     def print_nulls(df: pd.DataFrame):
+        """Prints the number of nulls for each column"""
+
         number_of_nulls = df.isna().sum()
         print(f"Nulls:\n{number_of_nulls}")
 
     @staticmethod
     def predict(X: pd.DataFrame):
+        """Returns true or false predictions for each row ins a dataframe"""
+
         length = X.shape[0]
         return np.random.choice([True, False], length)
 
     @staticmethod
     def print_confusion_matrix(y, y_pred):
+        """ Prints a confusion matrix with"""
+
         df = pd.DataFrame(
             metrics.confusion_matrix(y, y_pred),
             columns=["positive", "negative"],
@@ -90,6 +94,7 @@ class Helper:
 
     @staticmethod
     def convert_states(s: pd.Series):
+        """ Convert state abbreviations to full names"""
         """ Converts df['state'] from abbrev to full"""
 
         return s.map(Helper.STATES)
