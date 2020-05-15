@@ -94,7 +94,6 @@ class Helper:
 
     @staticmethod
     def convert_states(s: pd.Series):
-        """ Convert state abbreviations to full names"""
         """ Converts df['state'] from abbrev to full"""
 
         return s.map(Helper.STATES)
